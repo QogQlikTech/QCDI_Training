@@ -1,0 +1,574 @@
+{
+  "id": "transactions-x0k1",
+  "name": "transactions",
+  "type": "FACT",
+  "inputDatasets": [
+    {
+      "type": "NONE",
+      "datasetId": "transactions--6d5",
+      "name": "transactions",
+      "projectId": "{{ref(project.current.projectId)}}",
+      "taskId": "qcdi_transform--umh"
+    },
+    {
+      "type": "NONE",
+      "datasetId": "orders--kaf",
+      "name": "orders",
+      "projectId": "{{ref(project.current.projectId)}}",
+      "taskId": "qcdi_transform--umh"
+    }
+  ],
+  "datasetAttributes": {
+    "materialized": "ON",
+    "hasHistory": "INHERIT",
+    "hasLiveViews": "INHERIT",
+    "hasChanges": "INHERIT",
+    "hasStandardViewsWithHeaders": "ON",
+    "watermarkIncrementalSettings": "INHERIT",
+    "createExternalArtifacts": "INHERIT"
+  },
+  "tableDef": {
+    "name": "transactions",
+    "columns": [
+      {
+        "name": "transaction_id",
+        "ordinal": 1,
+        "nullable": false,
+        "primaryKeyOrdinal": 1,
+        "datatype": {
+          "type": "INT4",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "INT"
+        },
+        "id": "transaction_id",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "order_id",
+        "ordinal": 2,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "INT4",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "INT"
+        },
+        "id": "order_id",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "transaction_date",
+        "ordinal": 3,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "DATE",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "DATE"
+        },
+        "id": "transaction_date",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "shipped_date",
+        "ordinal": 4,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "DATE",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "DATE"
+        },
+        "id": "shipped_date",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "Transaction_status",
+        "ordinal": 5,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "STRING",
+          "length": 10,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "VARCHAR(10)"
+        },
+        "id": "transaction_status",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "update_date",
+        "ordinal": 6,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "DATE",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "DATE"
+        },
+        "id": "update_date",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "updated_by",
+        "ordinal": 7,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "STRING",
+          "length": 50,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "VARCHAR(50)"
+        },
+        "id": "updated_by",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "order_number",
+        "ordinal": 8,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "STRING",
+          "length": 150,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "VARCHAR(150)"
+        },
+        "id": "transactions_orders_relation--kah$_$order_number",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "customer_name",
+        "ordinal": 9,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "STRING",
+          "length": 150,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "VARCHAR(150)"
+        },
+        "id": "transactions_orders_relation--kah$_$customer_name",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "item_name",
+        "ordinal": 10,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "STRING",
+          "length": 50,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "VARCHAR(50)"
+        },
+        "id": "transactions_orders_relation--kah$_$item_name",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "ordered_Quantity",
+        "ordinal": 11,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "INT4",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "INT"
+        },
+        "id": "transactions_orders_relation--kah$_$ordered_quantity",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "order_type",
+        "ordinal": 12,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "STRING",
+          "length": 50,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "VARCHAR(50)"
+        },
+        "id": "transactions_orders_relation--kah$_$order_type",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "ordered_date",
+        "ordinal": 13,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "DATE",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "DATE"
+        },
+        "id": "transactions_orders_relation--kah$_$ordered_date",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "order_status",
+        "ordinal": 14,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "STRING",
+          "length": 50,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "VARCHAR(50)"
+        },
+        "id": "transactions_orders_relation--kah$_$order_status",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "transactions_orders_relation_update_date",
+        "ordinal": 15,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "DATE",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "DATE"
+        },
+        "id": "transactions_orders_relation--kah$_$update_date",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "transactions_orders_relation_updated_by",
+        "ordinal": 16,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "STRING",
+          "length": 50,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "VARCHAR(50)"
+        },
+        "id": "transactions_orders_relation--kah$_$updated_by",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      }
+    ],
+    "entityId": "transactions-x0k1",
+    "secureQri": "",
+    "fullLoadOnly": false
+  },
+  "factDatasetSettings": {
+    "type": "TRANSACTIONAL",
+    "rootDataEntityId": {
+      "type": "NONE",
+      "datasetId": "transactions--6d5",
+      "name": "transactions",
+      "projectId": "{{ref(project.current.projectId)}}",
+      "taskId": "qcdi_transform--umh"
+    },
+    "entityRelationshipPath": [
+      "transactions_orders_relation--kah"
+    ],
+    "factDimension": [
+      {
+        "name": "orders",
+        "dimension": {
+          "type": "NONE",
+          "datasetId": "orders-x0k8",
+          "projectId": "{{ref(project.current.projectId)}}",
+          "taskId": "qcdi_dm-yzwr"
+        },
+        "dimensionRelationshipPath": "transactions_orders_relation--kah",
+        "dimensionRelationshipPathDisplayName": "transactions_orders_relation",
+        "dimensionRelationshipPathShortName": ""
+      }
+    ],
+    "mapping": {
+      "columns": [
+        {
+          "columnName": "transaction_id",
+          "type": "ROOT_PK",
+          "expression": {
+            "expressionStatement": "${transaction_id}",
+            "alias": [
+              {
+                "name": "transaction_id",
+                "value": "transaction_id"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "order_id",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${order_id}",
+            "alias": [
+              {
+                "name": "order_id",
+                "value": "order_id"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "transaction_date",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${transaction_date}",
+            "alias": [
+              {
+                "name": "transaction_date",
+                "value": "transaction_date"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "shipped_date",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${shipped_date}",
+            "alias": [
+              {
+                "name": "shipped_date",
+                "value": "shipped_date"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "Transaction_status",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${Transaction_status}",
+            "alias": [
+              {
+                "name": "Transaction_status",
+                "value": "Transaction_status"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "update_date",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${update_date}",
+            "alias": [
+              {
+                "name": "update_date",
+                "value": "update_date"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "updated_by",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${updated_by}",
+            "alias": [
+              {
+                "name": "updated_by",
+                "value": "updated_by"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "order_number",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${order_number}",
+            "alias": [
+              {
+                "name": "order_number",
+                "value": "transactions_orders_relation--kah$_$order_number"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "customer_name",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${customer_name}",
+            "alias": [
+              {
+                "name": "customer_name",
+                "value": "transactions_orders_relation--kah$_$customer_name"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "item_name",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${item_name}",
+            "alias": [
+              {
+                "name": "item_name",
+                "value": "transactions_orders_relation--kah$_$item_name"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "ordered_Quantity",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${ordered_Quantity}",
+            "alias": [
+              {
+                "name": "ordered_Quantity",
+                "value": "transactions_orders_relation--kah$_$ordered_Quantity"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "order_type",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${order_type}",
+            "alias": [
+              {
+                "name": "order_type",
+                "value": "transactions_orders_relation--kah$_$order_type"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "ordered_date",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${ordered_date}",
+            "alias": [
+              {
+                "name": "ordered_date",
+                "value": "transactions_orders_relation--kah$_$ordered_date"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "order_status",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${order_status}",
+            "alias": [
+              {
+                "name": "order_status",
+                "value": "transactions_orders_relation--kah$_$order_status"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "transactions_orders_relation_update_date",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${transactions_orders_relation_update_date}",
+            "alias": [
+              {
+                "name": "transactions_orders_relation_update_date",
+                "value": "transactions_orders_relation--kah$_$update_date"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "transactions_orders_relation_updated_by",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${transactions_orders_relation_updated_by}",
+            "alias": [
+              {
+                "name": "transactions_orders_relation_updated_by",
+                "value": "transactions_orders_relation--kah$_$updated_by"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "transactionalDate": {
+      "columnName": "ordered_date",
+      "entityRelationshipPath": "transactions_orders_relation--kah$_$ordered_date",
+      "entityRelationshipPathDisplayName": "transactions_orders_relation_ordered_date"
+    },
+    "subtype": "MODEL_BASED",
+    "materializedSource": false
+  },
+  "virtualDataset": false,
+  "description": ""
+}

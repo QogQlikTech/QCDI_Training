@@ -1,0 +1,27 @@
+{
+  "sourceEntity": {
+    "type": "NONE",
+    "datasetId": "transactions--6d5",
+    "name": "transactions",
+    "projectId": "{{ref(project.current.projectId)}}",
+    "taskId": "qcdi_transform--umh"
+  },
+  "targetEntity": {
+    "type": "NONE",
+    "datasetId": "orders--kaf",
+    "name": "orders",
+    "projectId": "{{ref(project.current.projectId)}}",
+    "taskId": "qcdi_transform--umh"
+  },
+  "columnRelationships": [
+    {
+      "sourceColumn": "order_ID",
+      "targetColumn": "order_id",
+      "sourceColumnId": "order_id",
+      "targetColumnId": "order_id"
+    }
+  ],
+  "name": "transactions_orders_relation",
+  "description": "",
+  "id": "transactions_orders_relation--kah"
+}

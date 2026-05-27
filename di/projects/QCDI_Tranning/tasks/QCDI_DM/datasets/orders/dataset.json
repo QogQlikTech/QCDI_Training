@@ -1,0 +1,360 @@
+{
+  "id": "orders-x0k8",
+  "name": "orders",
+  "type": "DIMENSION",
+  "inputDatasets": [
+    {
+      "type": "NONE",
+      "datasetId": "orders--kaf",
+      "name": "orders",
+      "projectId": "{{ref(project.current.projectId)}}",
+      "taskId": "qcdi_transform--umh"
+    }
+  ],
+  "datasetAttributes": {
+    "materialized": "ON",
+    "hasHistory": "INHERIT",
+    "hasLiveViews": "INHERIT",
+    "hasChanges": "INHERIT",
+    "hasStandardViewsWithHeaders": "ON",
+    "watermarkIncrementalSettings": "INHERIT",
+    "createExternalArtifacts": "INHERIT"
+  },
+  "tableDef": {
+    "name": "orders",
+    "columns": [
+      {
+        "name": "order_ID",
+        "ordinal": 1,
+        "nullable": true,
+        "primaryKeyOrdinal": 1,
+        "datatype": {
+          "type": "INT4",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "INT"
+        },
+        "id": "order_id",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "order_number",
+        "ordinal": 2,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "STRING",
+          "length": 150,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "VARCHAR(150)"
+        },
+        "id": "order_number",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "customer_name",
+        "ordinal": 3,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "STRING",
+          "length": 150,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "VARCHAR(150)"
+        },
+        "id": "customer_name",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "item_name",
+        "ordinal": 4,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "STRING",
+          "length": 50,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "VARCHAR(50)"
+        },
+        "id": "item_name",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "ordered_Quantity",
+        "ordinal": 5,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "INT4",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "INT"
+        },
+        "id": "ordered_quantity",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "order_type",
+        "ordinal": 6,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "STRING",
+          "length": 50,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "VARCHAR(50)"
+        },
+        "id": "order_type",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "ordered_date",
+        "ordinal": 7,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "DATE",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "DATE"
+        },
+        "id": "ordered_date",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "order_status",
+        "ordinal": 8,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "STRING",
+          "length": 50,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "VARCHAR(50)"
+        },
+        "id": "order_status",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "update_date",
+        "ordinal": 9,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "DATE",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "DATE"
+        },
+        "id": "update_date",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "updated_by",
+        "ordinal": 10,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "STRING",
+          "length": 50,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "VARCHAR(50)"
+        },
+        "id": "updated_by",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      }
+    ],
+    "entityId": "",
+    "secureQri": "",
+    "fullLoadOnly": false
+  },
+  "dimensionDatasetSettings": {
+    "type": "TYPE1",
+    "rootDataEntityId": {
+      "type": "NONE",
+      "datasetId": "orders--kaf",
+      "name": "orders",
+      "projectId": "{{ref(project.current.projectId)}}",
+      "taskId": "qcdi_transform--umh"
+    },
+    "mapping": {
+      "columns": [
+        {
+          "columnName": "order_ID",
+          "type": "ROOT_PK",
+          "expression": {
+            "expressionStatement": "${order_ID}",
+            "alias": [
+              {
+                "name": "order_ID",
+                "value": "order_ID"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "order_number",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${order_number}",
+            "alias": [
+              {
+                "name": "order_number",
+                "value": "order_number"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "customer_name",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${customer_name}",
+            "alias": [
+              {
+                "name": "customer_name",
+                "value": "customer_name"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "item_name",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${item_name}",
+            "alias": [
+              {
+                "name": "item_name",
+                "value": "item_name"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "ordered_Quantity",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${ordered_Quantity}",
+            "alias": [
+              {
+                "name": "ordered_Quantity",
+                "value": "ordered_Quantity"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "order_type",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${order_type}",
+            "alias": [
+              {
+                "name": "order_type",
+                "value": "order_type"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "ordered_date",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${ordered_date}",
+            "alias": [
+              {
+                "name": "ordered_date",
+                "value": "ordered_date"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "order_status",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${order_status}",
+            "alias": [
+              {
+                "name": "order_status",
+                "value": "order_status"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "update_date",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${update_date}",
+            "alias": [
+              {
+                "name": "update_date",
+                "value": "update_date"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "updated_by",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${updated_by}",
+            "alias": [
+              {
+                "name": "updated_by",
+                "value": "updated_by"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "fullyType2Sources": false,
+    "subtype": "MODEL_BASED",
+    "materializedSource": false
+  },
+  "virtualDataset": false,
+  "description": ""
+}

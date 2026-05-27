@@ -1,0 +1,98 @@
+{
+  "sourceDataEntityKey": {
+    "type": "NONE",
+    "datasetId": "item-3phs",
+    "name": "item",
+    "projectId": "{{ref(project.current.projectId)}}",
+    "taskId": "onboarding_storage-3php"
+  },
+  "mappingFields": [
+    {
+      "columnId": "item_id",
+      "expression": {
+        "expressionStatement": "${item_id}",
+        "alias": [
+          {
+            "name": "item_id",
+            "value": "item_id"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "item_name",
+      "expression": {
+        "expressionStatement": "${item_name}",
+        "alias": [
+          {
+            "name": "item_name",
+            "value": "item_name"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "item_type",
+      "expression": {
+        "expressionStatement": "${item_type}",
+        "alias": [
+          {
+            "name": "item_type",
+            "value": "item_type"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "item_status",
+      "expression": {
+        "expressionStatement": "${item_status}",
+        "alias": [
+          {
+            "name": "item_status",
+            "value": "item_status"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "creation_date",
+      "expression": {
+        "expressionStatement": "${creation_date}",
+        "alias": [
+          {
+            "name": "creation_date",
+            "value": "creation_date"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "update_date",
+      "expression": {
+        "expressionStatement": "${update_date}",
+        "alias": [
+          {
+            "name": "update_date",
+            "value": "update_date"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "updated_by",
+      "expression": {
+        "expressionStatement": "${updated_by}",
+        "alias": [
+          {
+            "name": "updated_by",
+            "value": "updated_by"
+          }
+        ]
+      }
+    }
+  ],
+  "id": "item_default_mapping--umm",
+  "name": "item_default_mapping",
+  "description": ""
+}

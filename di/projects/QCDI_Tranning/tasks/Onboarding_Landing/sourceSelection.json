@@ -1,0 +1,31 @@
+{
+  "sourceConnection": "{{task.onboarding_landing-3pho.sourceConnection}}",
+  "includePatterns": [],
+  "excludePatterns": [],
+  "explicitlySelected": [
+    {
+      "name": "customer",
+      "schema": "{{task.onboarding_landing-3pho:null$_$dbo.schema}}",
+      "type": "TABLE",
+      "sourceTableId": "$replicate$dbo_customer"
+    },
+    {
+      "name": "item",
+      "schema": "{{task.onboarding_landing-3pho:null$_$dbo.schema}}",
+      "type": "TABLE",
+      "sourceTableId": "$replicate$dbo_item"
+    },
+    {
+      "name": "orders",
+      "schema": "{{task.onboarding_landing-3pho:null$_$dbo.schema}}",
+      "type": "TABLE",
+      "sourceTableId": "$replicate$dbo_orders"
+    },
+    {
+      "name": "transactions",
+      "schema": "{{task.onboarding_landing-3pho:null$_$dbo.schema}}",
+      "type": "TABLE",
+      "sourceTableId": "$replicate$dbo_transactions"
+    }
+  ]
+}

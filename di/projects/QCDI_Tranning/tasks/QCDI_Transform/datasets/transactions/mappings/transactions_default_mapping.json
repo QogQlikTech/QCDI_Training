@@ -1,0 +1,98 @@
+{
+  "sourceDataEntityKey": {
+    "type": "NONE",
+    "datasetId": "transactions-3phu",
+    "name": "transactions",
+    "projectId": "{{ref(project.current.projectId)}}",
+    "taskId": "onboarding_storage-3php"
+  },
+  "mappingFields": [
+    {
+      "columnId": "transaction_id",
+      "expression": {
+        "expressionStatement": "${transaction_id}",
+        "alias": [
+          {
+            "name": "transaction_id",
+            "value": "transaction_id"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "order_id",
+      "expression": {
+        "expressionStatement": "${order_id}",
+        "alias": [
+          {
+            "name": "order_id",
+            "value": "order_id"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "transaction_date",
+      "expression": {
+        "expressionStatement": "${transaction_date}",
+        "alias": [
+          {
+            "name": "transaction_date",
+            "value": "transaction_date"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "shipped_date",
+      "expression": {
+        "expressionStatement": "${shipped_date}",
+        "alias": [
+          {
+            "name": "shipped_date",
+            "value": "shipped_date"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "transaction_status",
+      "expression": {
+        "expressionStatement": "${Transaction_status}",
+        "alias": [
+          {
+            "name": "Transaction_status",
+            "value": "Transaction_status"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "update_date",
+      "expression": {
+        "expressionStatement": "${update_date}",
+        "alias": [
+          {
+            "name": "update_date",
+            "value": "update_date"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "updated_by",
+      "expression": {
+        "expressionStatement": "${updated_by}",
+        "alias": [
+          {
+            "name": "updated_by",
+            "value": "updated_by"
+          }
+        ]
+      }
+    }
+  ],
+  "id": "transactions_default_mapping--6d6",
+  "name": "transactions_default_mapping",
+  "description": ""
+}

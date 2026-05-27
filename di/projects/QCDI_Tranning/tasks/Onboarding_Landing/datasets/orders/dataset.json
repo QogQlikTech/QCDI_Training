@@ -1,0 +1,17 @@
+{
+  "id": "orders",
+  "name": "orders",
+  "type": "LANDING",
+  "inputDatasets": [
+    {
+      "type": "TABLE",
+      "datasetId": "$replicate$dbo_orders",
+      "name": "orders",
+      "projectId": "{{ref(project.current.projectId)}}",
+      "taskId": "onboarding_landing-3pho",
+      "schema": "{{task.onboarding_landing-3pho:null$_$dbo.schema}}"
+    }
+  ],
+  "virtualDataset": false,
+  "description": ""
+}

@@ -1,0 +1,86 @@
+{
+  "sourceDataEntityKey": {
+    "type": "NONE",
+    "datasetId": "customer-3phr",
+    "name": "customer",
+    "projectId": "{{ref(project.current.projectId)}}",
+    "taskId": "onboarding_storage-3php"
+  },
+  "mappingFields": [
+    {
+      "columnId": "customer_id",
+      "expression": {
+        "expressionStatement": "${customer_ID}",
+        "alias": [
+          {
+            "name": "customer_ID",
+            "value": "customer_ID"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "customer_name",
+      "expression": {
+        "expressionStatement": "${customer_name}",
+        "alias": [
+          {
+            "name": "customer_name",
+            "value": "customer_name"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "phone_number",
+      "expression": {
+        "expressionStatement": "${phone_number}",
+        "alias": [
+          {
+            "name": "phone_number",
+            "value": "phone_number"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "customer_status",
+      "expression": {
+        "expressionStatement": "${customer_status}",
+        "alias": [
+          {
+            "name": "customer_status",
+            "value": "customer_status"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "update_date",
+      "expression": {
+        "expressionStatement": "${update_date}",
+        "alias": [
+          {
+            "name": "update_date",
+            "value": "update_date"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "updated_by",
+      "expression": {
+        "expressionStatement": "${updated_by}",
+        "alias": [
+          {
+            "name": "updated_by",
+            "value": "updated_by"
+          }
+        ]
+      }
+    }
+  ],
+  "id": "customer_default_mapping-blq_",
+  "name": "customer_default_mapping",
+  "description": ""
+}

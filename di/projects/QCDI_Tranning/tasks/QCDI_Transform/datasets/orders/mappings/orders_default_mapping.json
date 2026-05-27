@@ -1,0 +1,134 @@
+{
+  "sourceDataEntityKey": {
+    "type": "NONE",
+    "datasetId": "orders-3pht",
+    "name": "orders",
+    "projectId": "{{ref(project.current.projectId)}}",
+    "taskId": "onboarding_storage-3php"
+  },
+  "mappingFields": [
+    {
+      "columnId": "order_id",
+      "expression": {
+        "expressionStatement": "${order_ID}",
+        "alias": [
+          {
+            "name": "order_ID",
+            "value": "order_ID"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "order_number",
+      "expression": {
+        "expressionStatement": "${order_number}",
+        "alias": [
+          {
+            "name": "order_number",
+            "value": "order_number"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "customer_name",
+      "expression": {
+        "expressionStatement": "${customer_name}",
+        "alias": [
+          {
+            "name": "customer_name",
+            "value": "customer_name"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "item_name",
+      "expression": {
+        "expressionStatement": "${item_name}",
+        "alias": [
+          {
+            "name": "item_name",
+            "value": "item_name"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "ordered_quantity",
+      "expression": {
+        "expressionStatement": "${ordered_Quantity}",
+        "alias": [
+          {
+            "name": "ordered_Quantity",
+            "value": "ordered_Quantity"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "order_type",
+      "expression": {
+        "expressionStatement": "${order_type}",
+        "alias": [
+          {
+            "name": "order_type",
+            "value": "order_type"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "ordered_date",
+      "expression": {
+        "expressionStatement": "${ordered_date}",
+        "alias": [
+          {
+            "name": "ordered_date",
+            "value": "ordered_date"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "order_status",
+      "expression": {
+        "expressionStatement": "${order_status}",
+        "alias": [
+          {
+            "name": "order_status",
+            "value": "order_status"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "update_date",
+      "expression": {
+        "expressionStatement": "${update_date}",
+        "alias": [
+          {
+            "name": "update_date",
+            "value": "update_date"
+          }
+        ]
+      }
+    },
+    {
+      "columnId": "updated_by",
+      "expression": {
+        "expressionStatement": "${updated_by}",
+        "alias": [
+          {
+            "name": "updated_by",
+            "value": "updated_by"
+          }
+        ]
+      }
+    }
+  ],
+  "id": "orders_default_mapping--kag",
+  "name": "orders_default_mapping",
+  "description": ""
+}
